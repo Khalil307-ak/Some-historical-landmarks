@@ -4,29 +4,29 @@
 
 <head>
 
-    <script async data-id="101471048" src="/2f5faab8b7250ed333.js"></script>
+    <script async data-id="101471048" src="/2f5faab8b7250ed333.js"></script>
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Historical Landmarks</title>
+    <title>Historical Landmarks</title>
 
-    <style>
+    <style>
 
-    /* General Body Styling */
+    /* General Body Styling */
 
 body {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 
-    background: linear-gradient(to bottom right, #000000, #474746, #ffffff);
+    background: linear-gradient(to bottom right, #000000, #474746, #ffffff);
 
-    margin: 0;
+    margin: 0;
 
-    padding: 0;
+    padding: 0;
 
-    color: #ffffff;
+    color: #ffffff;
 
 }
 
@@ -34,17 +34,23 @@ body {
 
 .nav-links {
 
-    text-align: center;
+    /* تم تصحيح: تم إزالة position: center; وهي خاصية خاطئة وتم استبدالها بأسلوب التوسيط المناسب لـ Flexbox أو Block حسب الرغبة */
 
-    position: center;
+    text-align: center; 
 
-    left: 2vw;
+    margin: 0 auto; /* توسيط العنصر nav-links */
 
-    list-style: none;
+    left: 2vw; /* هذا لا يعمل بشكل جيد مع التوسيط لكن تم الإبقاء عليه لعدم تغيير الكود غير الضروري */
 
-    display: flex;
+    list-style: none;
 
-    gap: 1.5rem;
+    display: flex;
+
+    gap: 1.5rem;
+
+    justify-content: center; /* إضافة توسيط لعناصر الـ flex box */
+
+    padding: 1rem 0; /* مسافة داخلية */
 
 }
 
@@ -52,13 +58,15 @@ body {
 
 h1 {
 
-    margin-left: 40vw;
+    /* تم تصحيح: دمج ستايلات العنوان لجعلها تتوسط بشكل صحيح. */
 
-    text-align: center;
+    text-align: center;
 
-    padding: 2rem;
+    padding: 2rem;
 
-    color: #ffffff;
+    color: #ffffff;
+
+    margin: 0; /* إزالة الهامش الافتراضي */
 
 }
 
@@ -68,13 +76,13 @@ h1 {
 
 .portfolio-container {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for 16 items */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for 16 items */
 
-    gap: 1.5rem;
+    gap: 1.5rem;
 
-    padding: 2rem;
+    padding: 2rem;
 
 }
 
@@ -84,25 +92,25 @@ h1 {
 
 .portfolio-item {
 
-    background: #fff;
+    background: #fff;
 
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px; /* Rounded corners */
 
-    overflow: hidden;
+    overflow: hidden;
 
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.74); /* Soft shadow */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.74); /* Soft shadow */
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    display: flex;
+    display: flex;
 
-    flex-direction: column; /* Make it a vertical layout */
+    flex-direction: column; /* Make it a vertical layout */
 
-    align-items: center;
+    align-items: center;
 
-    height: 400px; /* Increased height */
+    height: 400px; /* Increased height */
 
-    cursor: pointer; /* Cursor changes to pointer when hovering */
+    cursor: pointer; /* Cursor changes to pointer when hovering */
 
 }
 
@@ -112,9 +120,9 @@ h1 {
 
 .portfolio-item:hover {
 
-    transform: scale(1.05);
+    transform: scale(1.05);
 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -124,13 +132,13 @@ h1 {
 
 .portfolio-item img {
 
-    width: 100%; /* Make the image fill its container */
+    width: 100%; /* Make the image fill its container */
 
-    height: 60%; /* Ensure image takes 60% of the item height */
+    height: 60%; /* Ensure image takes 60% of the item height */
 
-    object-fit: cover; /* Ensure the image covers the space without distortion */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
 
-    border-radius: 10px;
+    border-radius: 10px;
 
 }
 
@@ -140,11 +148,11 @@ h1 {
 
 .portfolio-item .text-content {
 
-    text-align: center;
+    text-align: center;
 
-    padding: 5px; /* Inner spacing for text content */
+    padding: 5px; /* Inner spacing for text content */
 
-    margin-top: 10px; /* Space between image and text */
+    margin-top: 10px; /* Space between image and text */
 
 }
 
@@ -152,13 +160,13 @@ h1 {
 
 .portfolio-item .text-content h3 {
 
-    margin-top: 10px; /* Space above the title */
+    margin-top: 10px; /* Space above the title */
 
-    margin-bottom: 5px; /* Space between title and paragraph */
+    margin-bottom: 5px; /* Space between title and paragraph */
 
-    font-size: 18px; /* Font size for title */
+    font-size: 18px; /* Font size for title */
 
-    color: #333; /* Title color */
+    color: #333; /* Title color */
 
 }
 
@@ -166,13 +174,13 @@ h1 {
 
 .portfolio-item .text-content p {
 
-    margin-top: 0; /* No top margin */
+    margin-top: 0; /* No top margin */
 
-    margin-bottom: 10px; /* Space below the paragraph */
+    margin-bottom: 10px; /* Space below the paragraph */
 
-    font-size: 14px; /* Font size for description */
+    font-size: 14px; /* Font size for description */
 
-    color: #555; /* Paragraph color */
+    color: #555; /* Paragraph color */
 
 }
 
@@ -182,11 +190,11 @@ h1 {
 
 @media (max-width: 1200px) {
 
-    .portfolio-container {
+    .portfolio-container {
 
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
 
-    }
+    }
 
 }
 
@@ -194,11 +202,11 @@ h1 {
 
 @media (max-width: 992px) {
 
-    .portfolio-container {
+    .portfolio-container {
 
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
 
-    }
+    }
 
 }
 
@@ -206,11 +214,11 @@ h1 {
 
 @media (max-width: 768px) {
 
-    .portfolio-container {
+    .portfolio-container {
 
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
 
-    }
+    }
 
 }
 
@@ -218,11 +226,11 @@ h1 {
 
 @media (max-width: 480px) {
 
-    .portfolio-container {
+    .portfolio-container {
 
-        grid-template-columns: 1fr; /* 1 column on very small screens */
+        grid-template-columns: 1fr; /* 1 column on very small screens */
 
-    }
+    }
 
 }
 
@@ -230,23 +238,27 @@ h1 {
 
 footer {
 
-    text-align: center;
+    text-align: center;
 
-    margin-top: 3rem;
+    margin-top: 3rem;
 
-    padding: 1rem 0;
+    padding: 1rem 0;
 
-    background: linear-gradient(to bottom right, #000000, #474746, #69e9ff);
+    background: linear-gradient(to bottom right, #000000, #474746, #69e9ff);
 
-    color: #fff;
+    color: #fff;
 
 }
 
 .a{
 
-    
+    
 
-    text-align: center;
+    text-align: center;
+
+    display: block; /* لجعل رابط الانستغرام يأخذ سطرًا كاملاً للتوسيط */
+
+    padding-top: 1rem; /* إضافة مسافة علوية لـ header */
 
 }
 
@@ -254,7 +266,7 @@ footer {
 
 
 
-    </style>
+    </style>
 
 </head>
 
@@ -266,265 +278,245 @@ footer {
 
 
 
-    <header>
+    <header>
 
-    <a class="a"href="https://www.instagram.com/gogolana_dev_169"> instagram </a>
+        <a class="a" href="https://www.instagram.com/gogolana_dev_169"> instagram </a>
 
-        <nav class="nav-links"><h1>Some historical landmarks. By Khalil agourram ✌🏻</h1></nav>
+        <h1>Some historical landmarks. By Khalil agourram ✌🏻</h1>
 
-    </header>
+        <nav class="nav-links">
+
+            </nav>
+
+    </header>
 
 
 
-    <div class="portfolio-container">
+    <div class="portfolio-container">
 
-        <!-- Landmark 1 -->
+        <div class="portfolio-item">
 
-        <div class="portfolio-item">
+            <img src="1.jpeg">
 
-            <img src="1.jpeg">
+            <div class="text-content">
 
-            <div class="text-content">
+                <h3>The Great Wall of China</h3>
 
-                <h3>The Great Wall of China</h3>
-
-                <p>
+                <p>
 
 ‏The Great Wall of China, spanning thousands of kilometers, was constructed between the 7th century BC and the 16th century AD. It served as a defense mechanism against northern invaders, symbolizing ancient China's strategic ingenuity.</p>
 
-            </div>
+            </div>
 
-        </div>
-
-
-
-        <!-- Landmark 2 -->
-
-        <div class="portfolio-item">
-
-            <img src="2.jpeg" alt="Pyramids of Giza">
-
-            <div class="text-content">
-
-                <h3>The Pyramids of Giza</h3>
-
-                <p>‏The Pyramids of Giza, built as monumental tombs for ancient Egyptian pharaohs, showcase the remarkable engineering and spiritual significance of ancient Egypt.</p>
-
-            </div>
-
-        </div>
+        </div>
 
 
 
-        <!-- Landmark 3 -->
+        <div class="portfolio-item">
 
-        <div class="portfolio-item">
+            <img src="2.jpeg" alt="Pyramids of Giza">
 
-            <img src="3.jpeg" alt="Eiffel Tower">
+            <div class="text-content">
 
-            <div class="text-content">
+                <h3>The Pyramids of Giza</h3>
 
-                <h3>The Eiffel Tower</h3>
+                <p>‏The Pyramids of Giza, built as monumental tombs for ancient Egyptian pharaohs, showcase the remarkable engineering and spiritual significance of ancient Egypt.</p>
 
-                <p>‏The Eiffel Tower, constructed in 1889 for the Paris Exposition, represents a marvel of iron architecture and has become a global symbol of love and innovation.</p>
+            </div>
 
-            </div>
-
-        </div>
+        </div>
 
 
 
-        <!-- Landmark 4 -->
+        <div class="portfolio-item">
 
-        <div class="portfolio-item">
+            <img src="3.jpeg" alt="Eiffel Tower">
 
-            <img src="4.jpeg" alt="Taj Mahal">
+            <div class="text-content">
 
-            <div class="text-content">
+                <h3>The Eiffel Tower</h3>
 
-                <h3>Taj Mahal</h3>
+                <p>‏The Eiffel Tower, constructed in 1889 for the Paris Exposition, represents a marvel of iron architecture and has become a global symbol of love and innovation.</p>
 
-                <p>
+            </div>
 
-                
+        </div>
+
+
+
+        <div class="portfolio-item">
+
+            <img src="4.jpeg" alt="Taj Mahal">
+
+            <div class="text-content">
+
+                <h3>Taj Mahal</h3>
+
+                <p>
+
+                
 
 The Taj Mahal, built by Emperor Shah Jahan in the 17th century, is a UNESCO World Heritage Site in India. This iconic white marble mausoleum symbolizes eternal love and artistic brilliance.
 
-                </p>
+                </p>
 
-            </div>
+            </div>
 
-        </div>
+        </div>
 
 
 
-        <!-- Landmark 5 -->
+        <div class="portfolio-item">
 
-        <div class="portfolio-item">
+            <img src="5.jpeg" alt="Colosseum">
 
-            <img src="5.jpeg" alt="Colosseum">
+            <div class="text-content">
 
-            <div class="text-content">
+                <h3>The Colosseum</h3>
 
-                <h3>The Colosseum</h3>
+                <p>‏The Colosseum in Rome, Italy, is an ancient amphitheater that hosted gladiatorial contests and public spectacles. It is a testament to Roman engineering and culture.</p>
 
-                <p>‏The Colosseum in Rome, Italy, is an ancient amphitheater that hosted gladiatorial contests and public spectacles. It is a testament to Roman engineering and culture.</p>
+            </div>
 
-            </div>
+        </div>
 
-        </div>
 
 
+        <div class="portfolio-item">
 
-        <!-- Landmark 6 -->
+            <img src="6.jpeg" alt="Statue of Liberty">
 
-        <div class="portfolio-item">
+            <div class="text-content">
 
-            <img src="6.jpeg" alt="Statue of Liberty">
+                <h3>Statue of Liberty</h3>
 
-            <div class="text-content">
+                <p>‏The Statue of Liberty, a gift from France to the United States in 1886, stands as a global symbol of freedom and democracy, located in New York Harbor.</p>
 
-                <h3>Statue of Liberty</h3>
+            </div>
 
-                <p>‏The Statue of Liberty, a gift from France to the United States in 1886, stands as a global symbol of freedom and democracy, located in New York Harbor.</p>
+        </div>
 
-            </div>
 
-        </div>
 
+        <div class="portfolio-item">
 
+            <img src="7.jpeg" alt="Machu Picchu">
 
-        <!-- Landmark 7 -->
+            <div class="text-content">
 
-        <div class="portfolio-item">
+                <h3>Machu Picchu</h3>
 
-            <img src="7.jpeg" alt="Machu Picchu">
+                <p>‏Hidden in the Andes Mountains, Machu Picchu is an ancient Incan city known for its sophisticated dry-stone construction and stunning vistas.</p>
 
-            <div class="text-content">
+            </div>
 
-                <h3>Machu Picchu</h3>
+        </div>
 
-                <p>‏Hidden in the Andes Mountains, Machu Picchu is an ancient Incan city known for its sophisticated dry-stone construction and stunning vistas.</p>
 
-            </div>
 
-        </div>
+        <div class="portfolio-item">
 
+            <img src="8.jpeg" alt="Petra">
 
+            <div class="text-content">
 
-        <!-- Landmark 8 -->
+                <h3>Petra</h3>
 
-        <div class="portfolio-item">
+                <p>‏Petra, often called the "Rose City," is a historic archaeological site in Jordan, famed for its rock-cut architecture and water conduit system.</p>
 
-            <img src="8.jpeg" alt="Petra">
+            </div>
 
-            <div class="text-content">
+        </div>
 
-                <h3>Petra</h3>
 
-                <p>‏Petra, often called the "Rose City," is a historic archaeological site in Jordan, famed for its rock-cut architecture and water conduit system.</p>
 
-            </div>
+        <div class="portfolio-item">
 
-        </div>
+            <img src="9.jpeg" alt="Chichen Itza">
 
+            <div class="text-content">
 
+                <h3>Chichen Itza</h3>
 
-        <!-- Landmark 9 -->
+                <p>‏Chichen Itza is a Mayan archaeological site in Mexico, featuring the Kukulkan Pyramid, used for astronomical observations and ceremonial purposes.</p>
 
-        <div class="portfolio-item">
+            </div>
 
-            <img src="9.jpeg" alt="Chichen Itza">
+        </div>
 
-            <div class="text-content">
 
-                <h3>Chichen Itza</h3>
 
-                <p>‏Chichen Itza is a Mayan archaeological site in Mexico, featuring the Kukulkan Pyramid, used for astronomical observations and ceremonial purposes.</p>
+        <div class="portfolio-item">
 
-            </div>
+            <img src="10.jpeg" alt="Big Ben">
 
-        </div>
+            <div class="text-content">
 
+                <h3>Big Ben</h3>
 
+                <p>‏Big Ben, the nickname for the Great Bell of the clock at the Palace of Westminster, is an iconic symbol of London and the United Kingdom.</p>
 
-        <!-- Landmark 10 -->
+            </div>
 
-        <div class="portfolio-item">
+        </div>
 
-            <img src="10.jpeg" alt="Big Ben">
 
-            <div class="text-content">
 
-                <h3>Big Ben</h3>
+        <div class="portfolio-item">
 
-                <p>‏Big Ben, the nickname for the Great Bell of the clock at the Palace of Westminster, is an iconic symbol of London and the United Kingdom.</p>
+            <img src="11.jpeg" alt="Sydney Opera House">
 
-            </div>
+            <div class="text-content">
 
-        </div>
+                <h3>Sydney Opera House</h3>
 
+                <p>‏The Sydney Opera House, completed in 1973, is an architectural marvel in Australia, celebrated for its unique shell-like design and cultural significance.</p>
 
+            </div>
 
-        <!-- Landmark 11 -->
+        </div>
 
-        <div class="portfolio-item">
 
-            <img src="11.jpeg" alt="Sydney Opera House">
 
-            <div class="text-content">
+        <div class="portfolio-item">
 
-                <h3>Sydney Opera House</h3>
+            <img src="12.jpeg" alt="Angkor Wat">
 
-                <p>‏The Sydney Opera House, completed in 1973, is an architectural marvel in Australia, celebrated for its unique shell-like design and cultural significance.</p>
+            <div class="text-content">
 
-            </div>
+                <h3>Angkor Wat</h3>
 
-        </div>
+                <p>‏Angkor Wat, located in Cambodia, is the largest religious monument in the world, initially dedicated to the Hindu god Vishnu and later to Buddhism.</p>
 
+            </div>
 
+        </div>
 
-        <!-- Landmark 12 -->
 
-        <div class="portfolio-item">
 
-            <img src="12.jpeg" alt="Angkor Wat">
+        <div class="portfolio-item">
 
-            <div class="text-content">
+            <img src="13.jpeg" alt="Stonehenge">
 
-                <h3>Angkor Wat</h3>
+            <div class="text-content">
 
-                <p>‏Angkor Wat, located in Cambodia, is the largest religious monument in the world, initially dedicated to the Hindu god Vishnu and later to Buddhism.</p>
+                <h3>Stonehenge</h3>
 
-            </div>
+                <p>‏Stonehenge, a prehistoric stone circle in England, remains a mystery regarding its purpose, possibly serving as an ancient calendar or ceremonial site.</p>
 
-        </div>
+            </div>
 
+        </div>
 
-
-        <!-- Landmark 13 -->
-
-        <div class="portfolio-item">
-
-            <img src="13.jpej" alt="Stonehenge">
-
-            <div class="text-content">
-
-                <h3>Stonehenge</h3>
-
-                <p>‏Stonehenge, a prehistoric stone circle in England, remains a mystery regarding its purpose, possibly serving as an ancient calendar or ceremonial site.</p>
-
-            </div>
-
-        </div>
-
-    </div>
+    </div>
 
 </body>
 
+
+
 <footer>
 
-    <p>&copy; 2024 khalil agourram . All rights reserved.</p>
+    <p>&copy; 2024 khalil agourram . All rights reserved.</p>
 
 </footer>
 
